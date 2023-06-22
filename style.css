@@ -1,0 +1,49 @@
+body{
+    background: #555;
+    color: #fff;
+    font-family: monospace;
+    font-size: 24px;
+    text-align: center;
+    cursor: default;
+}
+
+.title{
+    font-size: 48px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 32px;
+}
+
+.title > i{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.categories > fieldset {
+    float: left;
+    min-width: 30%;
+    text-align: left;
+}
+
+/*.category > fieldset{
+    overflow-wrap: break-word;
+}*/
+
+.categories > fieldset > legend{
+    font-size: 32px;
+}
+
+a:link{
+    color: #ff0;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #ff0;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffc;
+    text-decoration: underline;
+}
