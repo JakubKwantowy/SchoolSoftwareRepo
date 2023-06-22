@@ -1,2 +1,4 @@
 # SchoolSoftwareRepo
-The Repository of School software
+
+The Repository of School software  
+*Designed for Sneaky Students*
