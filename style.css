@@ -1,3 +1,7 @@
+html{
+    image-rendering: pixelated;
+}
+
 body{
     background: #555;
     color: #fff;
@@ -21,8 +25,9 @@ body{
 
 .categories > fieldset {
     float: left;
-    min-width: 30%;
+    width: 30%;
     text-align: left;
+    word-wrap: normal;
 }
 
 /*.category > fieldset{
@@ -33,14 +38,13 @@ body{
     font-size: 32px;
 }
 
-a:link{
+a:link, a:visited{
     color: #ff0;
     text-decoration: none;
 }
 
-a:visited{
-    color: #ff0;
-    text-decoration: none;
+fieldset > a:link, fieldset > a:visited{
+    background: #333;
 }
 
 a:hover{

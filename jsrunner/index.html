@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS Runner</title>
+        <script src="script.js"></script>
+        <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+        <style>
+            body {
+                background: #333;
+                color: #fff;
+                font-family: monospace;
+                font-size: 24px;
+                text-align: center;
+            }
+            #run {
+                margin-top: 0.5em;
+                font-family: monospace;
+                font-size: 24px;
+            }
+            #code {
+                width: calc(100% - 4vw);
+                height: 50vh;
+                background: #555;
+                color: #fff;
+            }
+            #code::placeholder {
+                color: #fff;
+                opacity: calc(2 / 3);
+                /* font-weight: 100; */
+            }
+            #out {
+                width: calc(100%);
+                height: 25vh;
+                background: #000;
+                overflow-y: scroll;
+                overflow-wrap: break-word;
+                border-style: solid;
+                border-width: 1px;
+                border-color: #555;
+            }
+        </style>
+    </head>
+    <body>
+        <h2><u>JS Runner</u></h2>
+        <textarea placeholder="Put Code Here" id="code">outDiv.innerHTML = 'If this gets printed, it works'</textarea><br>
+        <div id="out"><span style="color:#f53">Press RUN to Run the code above</span></div>
+        <button id="run">RUN</button>
+    </body>
+</html>
