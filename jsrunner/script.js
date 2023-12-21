@@ -18,10 +18,8 @@
 // let runner = function(){}
 
 function runCode(code) {
-    let runner = function(){}
     const toRun = `const outDiv = document.getElementById('out')\noutDiv.innerHTML = ''\n${code}` 
-    runner = new Function(toRun)
-    runner()
+    new Function(toRun)()
 }
 
 window.onload = () => document.getElementById('run').onclick = () => runCode(document.getElementById('code').value)
