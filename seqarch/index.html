@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sequential Archive</title>
+        <style>
+            body {
+                text-align: center;
+            }
+        </style>
+        <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+    </head>
+    <body>
+        <h1>Sequential Archive</h1>
+        File: <input type="file" id="loader"/>
+        <br><br>
+        <hr>
+        <div id="display"></div>
+        <hr>
+        <br>
+        <form id="uploader">
+            Entry Name: <input type="text" name="name"/><br>
+            Entry Type: <input type="number" min="0" max="255" name="type" value="0"/><br>
+            File: <input type="file" name="file"/><br>
+            <button type="submit">Add Entry</button>
+        </form>
+        <br>
+        <button onclick="download_archive()">Download Archive</button><br>
+        <br>
+        Made by JakubKwantowy
+        <script src="seqarch.js"></script>
+    </body>
+</html>
