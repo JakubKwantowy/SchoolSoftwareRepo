@@ -17,6 +17,19 @@
 
 // let runner = function(){}
 
+/**
+ * @param {String} url 
+ */
+window.loadThis = function(url) {
+    const xhttp = new XMLHttpRequest()
+    xhttp.open('GET', url)
+    xhttp.addEventListener('load', e => {
+        if(xhttp.status != 200) return
+        new Function(xhttp.responseText)()
+    })
+    xhttp.send()
+}
+
 function runCode(code) {
     const toRun = `const outDiv = document.getElementById('out')\noutDiv.innerHTML = ''\n${code}` 
     new Function(toRun)()
