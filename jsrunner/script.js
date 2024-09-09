@@ -35,4 +35,34 @@ function runCode(code) {
     new Function(toRun)()
 }
 
-window.onload = () => document.getElementById('run').onclick = () => runCode(document.getElementById('code').value)
+function saveCode(code) {
+    const blob = new Blob([code])
+    const bloburl = URL.createObjectURL(blob)
+    console.log(bloburl)
+    const link = document.createElement('a')
+    link.href = bloburl
+    const name = prompt('Enter Program Name:')
+    link.download = `${name}.js`
+    link.click()
+}
+
+function loadCode(code) {
+    document.getElementById('code').value = code
+}
+
+window.onload = () => {
+    document.getElementById('run').onclick = () => runCode(document.getElementById('code').value)
+    document.getElementById('save').onclick = () => saveCode(document.getElementById('code').value)
+    /**
+     * @type {HTMLFormElement}
+     */
+    const loadForm = document.getElementById('load')
+    loadForm.addEventListener('submit', e => {
+        e.preventDefault()
+        const file = e.target.elements.file.files[0]
+        if(!file) return
+        const reader = new FileReader()
+        reader.addEventListener('load', e => {loadCode(reader.result)})
+        reader.readAsText(file, 'utf-8')
+    })
+}
